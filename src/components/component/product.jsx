@@ -13,10 +13,11 @@ export default function product() {
     <>
       <Banner />
       <main className="px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" style={{ backgroundColor: "whitesmoke" }}>
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((product) => (
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((product, index) => (
           <Card>
             <CardContent className="flex flex-col items-center text-center">
               <Image
+                key={index}
                 alt="Product image"
                 className="w-32 h-32 object-cover mb-4"
                 height="200"
